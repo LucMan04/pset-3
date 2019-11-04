@@ -19,18 +19,7 @@ if (Number.isNaN(amount)) {
 } else if (amount < MIN || amount > MAX) {
     console.log("\nInvalid");
 } else {
-  while (amount > Q) {
-    numberQ + 1
-    amount - Q
-  while (amount > D)
-    amount = amount - D
-    numberD++
-  while (amount > N)
-    amount = amount - N
-    numberN++
-  while (amount > P)
-    amount = amount - P
-    numberP++
+  
   }
 }
 console.log(+numberQ+" quarters, "+numberD+" dimes, "+numberN+" nickles, and "+numberP+" pennies.");
