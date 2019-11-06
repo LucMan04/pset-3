@@ -2,14 +2,17 @@ const readlineSync = require("readline-sync");
 
 let amount = Number(readlineSync.question("\nEnter a number: "));
 
+const min = Number.MIN_SAFE_INTEGER
+const max = Number.MAX_SAFE_INTEGER
 
-
-if (amount > 0) {
-    console.log("Positive.");
+if (max < amount < min) {
+  console.log("\nInvalid.");
+}else if (amount > 0) {
+    console.log("\nPositive.");
   } else if (amount < 0) {
-    console.log("Negative.");
+    console.log("\nNegative.");
   }else if (Number.isNaN(amount)) {
-    console.log("Invalid.");
+    console.log("\nInvalid.");
   }else {
-  console.log("Zero.");
+  console.log("\nZero.");
 }

@@ -6,20 +6,25 @@ const Q = 0.25;
 const D = 0.1;
 const N = 0.05;
 const P = 0.01;
-let numberQ = 0;
-let numberD = 0;
-let numberN = 0;
-let numberP = 0;
+
 
 
 let amount = Number(readlineSync.question("\nEnter a dollar amount: "));
 
 if (Number.isNaN(amount)) {
-    console.log("\nInvalid");
+    console.log("\nInvalid.");
 } else if (amount < MIN || amount > MAX) {
-    console.log("\nInvalid");
+    console.log("\nInvalid.");
 } else {
-  
-  }
+
+let quarters = Math.floor(amount/Q)
+  let q_Amount = amount % Q
+let dimes = Math.floor(q_Amount/D)
+  let d_Amount = q_Amount % D
+let nickles = Math.floor(d_Amount/N)
+  let n_Amount = d_Amount % N
+let pennies = Math.ceil(n_Amount/P)
+
+
+console.log(quarters+" quarters, "+dimes+" dimes, "+nickles+" nickles, and "+pennies+" pennies.");
 }
-console.log(+numberQ+" quarters, "+numberD+" dimes, "+numberN+" nickles, and "+numberP+" pennies.");
