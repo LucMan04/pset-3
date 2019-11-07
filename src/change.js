@@ -26,5 +26,5 @@ let nickles = Math.floor(d_Amount/N)
 let pennies = Math.ceil(n_Amount/P)
 
 
-console.log(quarters+" quarters, "+dimes+" dimes, "+nickles+" nickles, and "+pennies+" pennies.");
+console.log("\n"+quarters+" quarters, "+dimes+" dimes, "+nickles+" nickles, and "+pennies+" pennies.\n");
 }
